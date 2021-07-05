@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.bird.common.realtime.mapper.RealTimeNewsMapper">
+
+    <resultMap id="BaseResultMap" type="com.bird.common.realtime.domain.RealTimeNews">
+        <id column="id" jdbcType="INTEGER" property="id"/>
+        <result column="app_type" jdbcType="VARCHAR" property="appType"/>
+        <result column="info_type" jdbcType="VARCHAR" property="infoType"/>
+        <result column="rt_type" jdbcType="VARCHAR" property="rtType"/>
+        <result column="second_rt_type" jdbcType="VARCHAR" property="secondRtType"/>
+        <result column="rt_id" jdbcType="BIGINT" property="rtId"/>
+        <result column="title" jdbcType="VARCHAR" property="title"/>
+        <result column="org_id" jdbcType="BIGINT" property="orgId"/>
+        <result column="org_name" jdbcType="VARCHAR" property="orgName"/>
+        <result column="parent_org_name" jdbcType="VARCHAR" property="parentOrgName"/>
+        <result column="is_rec" jdbcType="CHAR" property="isRec"/>
+        <result column="is_top" jdbcType="CHAR" property="isTop"/>
+        <result column="top_time" jdbcType="TIMESTAMP" property="topTime"/>
+        <result column="user_id" jdbcType="BIGINT" property="userId"/>
+        <result column="user_name" jdbcType="VARCHAR" property="userName"/>
+        <result column="first_img" jdbcType="VARCHAR" property="firstImg"/>
+        <result column="creater" jdbcType="VARCHAR" property="creater"/>
+        <result column="editor" jdbcType="VARCHAR" property="editor"/>
+        <result column="create_time" jdbcType="TIMESTAMP" property="createTime"/>
+        <result column="edit_time" jdbcType="TIMESTAMP" property="editTime"/>
+        <result column="remark" jdbcType="VARCHAR" property="remark"/>
+    </resultMap>
+
+    <sql id="table_name">  rt_news </sql>
+
+    <sql id="condition_sql">
+        <if test="appType != null and appType != ''">and app_type = #{appType,jdbcType=VARCHAR}</if>
+        <if test="infoType != null and infoType != ''">and info_type = #{infoType,jdbcType=VARCHAR}</if>
+        <if test="rtType != null and rtType != ''">and rt_type = #{rtType,jdbcType=VARCHAR}</if>
+        <if test="title != null and title != ''">and title like #{title,jdbcType=VARCHAR}</if>
+        <if test="orgName != null and orgName != ''">and org_name = #{orgName,jdbcType=VARCHAR}</if>
+        <if test="orgId != null">and org_id = #{orgId,jdbcType=BIGINT}</if>
+        <if test="orgIds != null">
+            and org_id IN
+            <foreach collection="orgIds" item="orgId" index="index" open="(" close=")" separator=",">
+                #{orgId}
+            </foreach>
+        </if>
+        <if test="secondRtType != null and secondRtType != ''">and second_rt_type = #{secondRtType,jdbcType=VARCHAR}
+        </if>
+        <if test="rtId != null">and rt_id = #{rtId,jdbcType=BIGINT}</if>
+        <if test="userId != null">and user_id = #{ssoUserId,jdbcType=BIGINT}</if>
+        <if test="isTop != null and isTop != ''">and is_top = #{isTop,jdbcType=CHAR}</if>
+        <if test="isRec != null and isRec != ''">and is_rec = #{isRec,jdbcType=CHAR}</if>
+        <if test="startSubmitTime != null  and  endSubmitTime != null">
+            and DATE(create_time) >= #{startSubmitTime,jdbcType=TIMESTAMP}
+            and DATE(create_time) <![CDATA[ <= ]]> #{endSubmitTime,jdbcType=TIMESTAMP}
+        </if>
+
+    </sql>
+
+
+    <sql id="Base_Column_List">
+        app_type,info_type,rt_type,second_rt_type,rt_id,org_id,org_name,parent_org_name,title, first_img,is_top,top_time,is_rec,user_id,user_name, creater,
+        editor, create_time, edit_time
+      </sql>
+
+    <select id="get" parameterType="java.util.Map" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List"/>
+        from
+        <include refid="table_name"/>
+        <where>
+            <include refid="condition_sql"/>
+        </where>
+    </select>
+
+
+    <delete id="deleteBy" parameterType="java.util.Map">
+        delete from
+        <include refid="table_name"/>
+
+        where app_type = #{appType,jdbcType=VARCHAR} and rt_id = #{rtId,jdbcType=BIGINT}
+    </delete>
+
+
+
+    <insert id="insert" useGeneratedKeys="true" keyProperty="id"
+            parameterType="com.bird.common.realtime.domain.RealTimeNews">
+        insert into
+        <include refid="table_name"/>
+        ( app_type,info_type,rt_type,second_rt_type,rt_id,title, first_img,
+        is_top,is_rec,user_id,user_name,org_id,org_name,parent_org_name,
+        creater,create_time)
+        values (
+        #{appType,jdbcType=VARCHAR},
+        #{infoType,jdbcType=VARCHAR},
+        #{rtType,jdbcType=VARCHAR},
+        #{secondRtType,jdbcType=VARCHAR},
+        #{rtId,jdbcType=BIGINT},#{title,jdbcType=VARCHAR},
+        #{firstImg,jdbcType=VARCHAR},
+        #{isTop,jdbcType=CHAR},
+        #{isRec,jdbcType=CHAR},
+        #{userId,jdbcType=BIGINT},
+        #{userName,jdbcType=VARCHAR},
+        #{orgId,jdbcType=BIGINT},
+        #{orgName,jdbcType=VARCHAR},
+        #{parentOrgName,jdbcType=VARCHAR},
+        #{creater,jdbcType=VARCHAR},NOW())
+    </insert>
+
+    <update id="update" parameterType="com.bird.common.realtime.domain.RealTimeNews">
+        update
+        <include refid="table_name"/>
+        <trim prefix="set" suffixOverrides=",">
+            <if test="title != null and title != ''">title = #{title,jdbcType=CHAR},</if>
+            <if test="isTop != null and isTop != ''">is_top = #{isTop,jdbcType=CHAR},</if>
+            <if test="isRec != null and isRec != ''">is_rec = #{isRec,jdbcType=CHAR},</if>
+            <if test="orgId != null">org_id = #{orgId,jdbcType=BIGINT},</if>
+            <if test="orgName != null and orgName != ''">org_name = #{orgName,jdbcType=VARCHAR},</if>
+            <if test="parentOrgName != null and parentOrgName != ''">parent_org_name = #{parentOrgName,jdbcType=VARCHAR},</if>
+            <if test="firstImg != null and firstImg != ''">first_img = #{firstImg,jdbcType=VARCHAR},</if>
+            <if test="topTime != null">top_time = NOW(),</if>
+            editor = #{editor,jdbcType=VARCHAR},
+            edit_time = NOW()
+        </trim>
+        where app_type = #{appType,jdbcType=VARCHAR} and rt_id = #{rtId,jdbcType=BIGINT}
+    </update>
+
+    <update id="updateBy" parameterType="java.util.Map">
+        update
+        <include refid="table_name"/>
+        <trim prefix="set" suffixOverrides=",">
+            <if test="title != null and title != ''">title = #{title,jdbcType=CHAR},</if>
+            <if test="isTop != null and isTop != ''">is_top = #{isTop,jdbcType=CHAR},</if>
+            <if test="isRec != null and isRec != ''">is_rec = #{isRec,jdbcType=CHAR},</if>
+            <if test="orgId != null">org_id = #{orgId,jdbcType=BIGINT},</if>
+            <if test="orgName != null and orgName != ''">org_name = #{orgName,jdbcType=VARCHAR},</if>
+            <if test="parentOrgName != null and parentOrgName != ''">parent_org_name = #{parentOrgName,jdbcType=VARCHAR},</if>
+            <if test="firstImg != null and firstImg != ''">first_img = #{firstImg,jdbcType=VARCHAR},</if>
+            <if test="topTime != null">top_time = NOW(),</if>
+            editor = #{editor,jdbcType=VARCHAR},
+            edit_time = NOW()
+        </trim>
+        where app_type = #{appType,jdbcType=VARCHAR} and rt_id = #{rtId,jdbcType=BIGINT}
+    </update>
+
+
+    <select id="count" parameterType="java.util.Map" resultType="java.lang.Integer">
+        select count(*) from
+        <include refid="table_name"/>
+        <where>
+            <include refid="condition_sql"/>
+        </where>
+    </select>
+
+    <select id="list" parameterType="java.util.Map" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List"/>
+        from
+        <include refid="table_name"/>
+        <where>
+            <include refid="condition_sql"/>
+        </where>
+    </select>
+
+</mapper>

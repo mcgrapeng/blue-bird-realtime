@@ -1,0 +1,17 @@
+spring:
+  cloud:
+    nacos:
+      config:
+        server-addr: 10.217.58.56:8848,10.217.63.64:8848,10.217.63.67:8848
+        namespace: f3e544a7-a698-455f-a87b-203af737e9e7
+        group: DEFAULT_GROUP # 使用的 Nacos 配置分组，默认为 DEFAULT_GROU
+        name: qihoo-common-realtime-service
+        file-extension: yaml
+
+#logging:
+#  level:
+#    org:
+#      springframework:
+#        kafka: ERROR # spring-kafka INFO 日志太多了，所以我们限制只打印 ERROR 级别
+#      apache:
+#        kafka: ERROR # kafka INFO 日志太多了，所以我们限制只打印 ERROR 级别

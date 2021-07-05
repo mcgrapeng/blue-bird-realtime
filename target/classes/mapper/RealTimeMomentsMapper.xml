@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.qihoo.common.realtime.mapper.RealTimeMentMapper">
+    <resultMap id="BaseResultMap" type="com.qihoo.common.realtime.domain.RealTimeMents">
+        <id column="id" jdbcType="INTEGER" property="id"/>
+        <result column="rt_id" jdbcType="BIGINT" property="rtId" />
+        <result column="app_type" jdbcType="VARCHAR" property="appType"/>
+        <result column="info_type" jdbcType="VARCHAR" property="infoType"/>
+        <result column="rt_type" jdbcType="VARCHAR" property="rtType"/>
+        <result column="user_id" jdbcType="BIGINT" property="userId"/>
+        <result column="user_name" jdbcType="VARCHAR" property="userName"/>
+        <result column="user_head_img" jdbcType="VARCHAR" property="userHeadImg"/>
+        <result column="org_id" jdbcType="BIGINT" property="orgId"/>
+        <result column="org_name" jdbcType="VARCHAR" property="orgName"/>
+        <result column="parent_org_id" jdbcType="BIGINT" property="parentOrgId" />
+        <result column="parent_org_name" jdbcType="VARCHAR" property="parentOrgName" />
+        <result column="type" jdbcType="VARCHAR" property="type"/>
+        <result column="meta_type" jdbcType="VARCHAR" property="metaType"/>
+        <result column="title" jdbcType="VARCHAR" property="title"/>
+        <result column="content" jdbcType="VARCHAR" property="content"/>
+        <result column="is_close" jdbcType="CHAR" property="isClose"/>
+        <result column="pi_resources" jdbcType="VARCHAR" property="piResources"/>
+        <result column="rt_resources" jdbcType="VARCHAR" property="rtResources"/>
+        <result column="vi_resources" jdbcType="VARCHAR" property="viResources"/>
+        <result column="first_img" jdbcType="VARCHAR" property="firstImg"/>
+        <result column="creater" jdbcType="VARCHAR" property="creater"/>
+        <result column="editor" jdbcType="VARCHAR" property="editor"/>
+        <result column="create_time" jdbcType="TIMESTAMP" property="createTime"/>
+        <result column="edit_time" jdbcType="TIMESTAMP" property="editTime"/>
+    </resultMap>
+
+
+    <sql id="table_name">  rt_moments </sql>
+
+    <sql id="condition_sql">
+        <if test="appType != null and appType != ''">and app_type = #{appType,jdbcType=VARCHAR}</if>
+        <if test="rtType != null and rtType != ''">and rt_type = #{rtType,jdbcType=VARCHAR}</if>
+        <if test="rtId != null">and rt_id = #{rtId,jdbcType=BIGINT}</if>
+        <if test="title != null and title != ''">and title like #{title,jdbcType=VARCHAR}</if>
+        <if test="ssoUserId != null">and user_id = #{ssoUserId,jdbcType=BIGINT}</if>
+        <if test="type != null and type!= ''">and `type` = #{type,jdbcType=VARCHAR}</if>
+        <if test="orgId != null">and org_id = #{orgId,jdbcType=BIGINT}</if>
+        <if test="orgIds != null">
+            and org_id IN
+            <foreach collection="orgIds" item="orgId" index="index" open="(" close=")" separator=",">
+                #{orgId}
+            </foreach>
+        </if>
+        <if test="isClose != null and isClose != ''">and is_close = #{isClose,jdbcType=CHAR}</if>
+        <if test="startSubmitTime != null  and  endSubmitTime != null">
+            and DATE(create_time) >= #{startSubmitTime,jdbcType=TIMESTAMP}
+            and DATE(create_time) <![CDATA[ <= ]]> #{endSubmitTime,jdbcType=TIMESTAMP}
+        </if>
+    </sql>
+
+    <sql id="Base_Column_List">
+        app_type,rt_type,info_type,rt_id,user_id,user_name,user_head_img,is_close,org_id,org_name,parent_org_id,parent_org_name,`type`,meta_type ,title,first_img,content, pi_resources,rt_resources,vi_resources,creater, editor,create_time,edit_time
+    </sql>
+
+
+    <insert id="insert" useGeneratedKeys="true" keyProperty="id"
+            parameterType="com.qihoo.common.realtime.domain.RealTimeMents">
+        insert into
+        <include refid="table_name"/>
+        ( app_type,info_type,rt_type,rt_id,user_id, user_name,user_head_img,is_close,org_id,org_name,parent_org_id,parent_org_name,
+        `type`, meta_type,title,first_img,content, pi_resources,rt_resources,vi_resources,
+        creater,create_time)
+        values (
+        #{appType,jdbcType=VARCHAR}
+        ,#{infoType,jdbcType=VARCHAR}
+        ,#{rtType,jdbcType=VARCHAR}
+        ,#{rtId,jdbcType=BIGINT},#{userId,jdbcType=BIGINT}
+        , #{userName,jdbcType=VARCHAR}
+        , #{userHeadImg,jdbcType=VARCHAR}
+        , #{isClose,jdbcType=CHAR}
+        , #{orgId,jdbcType=BIGINT}
+        , #{orgName,jdbcType=VARCHAR}
+        , #{parentOrgId,jdbcType=BIGINT}
+        , #{parentOrgName,jdbcType=VARCHAR}
+        , #{type,jdbcType=VARCHAR}
+        , #{metaType,jdbcType=VARCHAR}
+        , #{title,jdbcType=VARCHAR}
+        , #{firstImg,jdbcType=VARCHAR}
+        , #{content,jdbcType=VARCHAR}
+        , #{piResources,jdbcType=VARCHAR}
+        , #{rtResources,jdbcType=VARCHAR}
+        , #{viResources,jdbcType=VARCHAR}
+        ,#{creater,jdbcType=VARCHAR},
+        NOW()
+        )
+    </insert>
+
+
+    <select id="get" parameterType="java.util.Map" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List"/>
+        from
+        <include refid="table_name"/>
+        <where>
+            <include refid="condition_sql"/>
+        </where>
+    </select>
+
+
+
+    <delete id="deleteBy" parameterType="java.util.Map" >
+        delete from
+        <include refid="table_name"/>
+        where app_type = #{appType,jdbcType=VARCHAR} and rt_id = #{rtId,jdbcType=BIGINT}
+    </delete>
+
+
+    <select id="count" parameterType="java.util.Map" resultType="java.lang.Integer">
+        select count(*) from
+        <include refid="table_name"/>
+        <where>
+            <include refid="condition_sql"/>
+        </where>
+    </select>
+
+
+    <select id="list" parameterType="java.util.Map" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List"/>
+        from
+        <include refid="table_name"/>
+        <where>
+            <include refid="condition_sql"/>
+        </where>
+        order by create_time desc
+    </select>
+
+
+    <update id="updateBy" parameterType="java.util.Map">
+        update
+        <include refid="table_name"/>
+        <trim prefix="set" suffixOverrides=",">
+            <if test="viResources != null and viResources != ''">vi_resources = #{viResources,jdbcType=VARCHAR},</if>
+            <if test="firstImg != null and firstImg != ''">first_img = #{firstImg,jdbcType=VARCHAR},</if>
+            <if test="isClose != null and isClose != ''">is_close = #{isClose,jdbcType=CHAR},</if>
+            editor = #{editor,jdbcType=VARCHAR},
+            edit_time = NOW()
+        </trim>
+        where app_type = #{appType,jdbcType=VARCHAR} and rt_id = #{rtId,jdbcType=BIGINT}
+    </update>
+
+
+
+</mapper>

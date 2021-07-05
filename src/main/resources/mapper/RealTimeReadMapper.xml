@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.bird.common.realtime.mapper.RealTimeReadMapper">
+
+    <resultMap id="BaseResultMap" type="com.bird.common.realtime.domain.RealTimeRead">
+        <id column="id" jdbcType="INTEGER" property="id"/>
+        <result column="app_type" jdbcType="VARCHAR" property="appType"/>
+        <result column="read_id" jdbcType="BIGINT" property="readId"/>
+        <result column="rt_id" jdbcType="BIGINT" property="rtId"/>
+        <result column="rt_type" jdbcType="VARCHAR" property="rtType"/>
+        <result column="info_type" jdbcType="VARCHAR" property="infoType"/>
+        <result column="user_id" jdbcType="BIGINT" property="userId"/>
+        <result column="user_name" jdbcType="VARCHAR" property="userName"/>
+        <result column="read_user_id" jdbcType="BIGINT" property="readUserId"/>
+        <result column="read_user_name" jdbcType="VARCHAR" property="readUserName"/>
+        <result column="read_org_name" jdbcType="VARCHAR" property="readOrgName"/>
+        <result column="read_times" jdbcType="INTEGER" property="readTimes"/>
+        <result column="ip" jdbcType="VARCHAR" property="ip"/>
+        <result column="creater" jdbcType="VARCHAR" property="creater"/>
+        <result column="create_time" jdbcType="TIMESTAMP" property="createTime"/>
+        <result column="editor" jdbcType="VARCHAR" property="editor"/>
+        <result column="edit_time" jdbcType="TIMESTAMP" property="editTime"/>
+    </resultMap>
+
+
+    <sql id="table_name">  rt_read </sql>
+
+    <sql id="condition_sql">
+        <if test="appType != null and appType != ''">and app_type = #{appType,jdbcType=VARCHAR}</if>
+        <if test="rtId != null">and rt_id = #{rtId,jdbcType=BIGINT}</if>
+        <if test="readUserId != null">and read_user_id = #{readUserId,jdbcType=BIGINT}</if>
+    </sql>
+
+
+    <sql id="Base_Column_List">
+        app_type, read_id,rt_id,rt_type,info_type,user_id,user_name,read_user_id
+        , read_user_name,read_org_name, read_times , ip , creater,create_time, editor,edit_time
+    </sql>
+
+
+    <select id="get" parameterType="java.util.Map" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List"/>
+        from
+        <include refid="table_name"/>
+        <where>
+            <include refid="condition_sql"/>
+        </where>
+    </select>
+
+
+    <delete id="deleteBy" parameterType="java.util.Map">
+        delete from
+        <include refid="table_name"/>
+        where app_type = #{appType,jdbcType=VARCHAR} and read_id = #{readId,jdbcType=BIGINT}
+    </delete>
+
+
+    <insert id="insert" useGeneratedKeys="true" keyProperty="id"
+            parameterType="com.bird.common.realtime.domain.RealTimeRead">
+        insert into
+        <include refid="table_name"/>
+        (app_type,read_id,rt_id, rt_type, info_type, user_id, user_name, read_user_id, read_user_name,read_org_name,
+        read_times , ip ,
+        creater,create_time
+        )
+        values (#{appType,jdbcType=VARCHAR},#{readId,jdbcType=BIGINT},#{rtId,jdbcType=BIGINT}
+        ,#{rtType,jdbcType=VARCHAR}
+        ,#{infoType,jdbcType=VARCHAR}
+        ,#{userId,jdbcType=BIGINT}
+        ,#{userName,jdbcType=VARCHAR}
+        ,#{readUserId,jdbcType=BIGINT}
+        ,#{readUserName,jdbcType=VARCHAR}
+        ,#{readOrgName,jdbcType=VARCHAR}
+        ,#{readTimes,jdbcType=INTEGER}
+        ,#{ip,jdbcType=VARCHAR}
+        ,#{creater,jdbcType=VARCHAR},NOW())
+    </insert>
+
+
+    <update id="update" parameterType="com.bird.common.realtime.domain.RealTimeRead">
+        update
+        <include refid="table_name"/>
+        set
+        read_times = #{readTimes,jdbcType=INTEGER},
+        ip = #{ip,jdbcType=VARCHAR},
+        editor = #{editor,jdbcType=VARCHAR},
+        edit_time = NOW()
+        where app_type = #{appType,jdbcType=VARCHAR} and read_id = #{readId,jdbcType=BIGINT}
+    </update>
+
+
+    <update id="updateBy" parameterType="java.util.Map">
+        update
+        <include refid="table_name"/>
+        set
+        read_times = #{readTimes,jdbcType=INTEGER},
+        editor = #{editor,jdbcType=VARCHAR},
+        edit_time = NOW()
+        where app_type = #{appType,jdbcType=VARCHAR} and read_id = #{readId,jdbcType=BIGINT}
+    </update>
+
+
+    <select id="count" parameterType="java.util.Map" resultType="java.lang.Integer">
+        select count(*) from
+        <include refid="table_name"/>
+        <where>
+            <include refid="condition_sql"/>
+        </where>
+    </select>
+
+
+
+    <select id="sumReadTimes" parameterType="java.util.Map" resultType="java.lang.Integer">
+        select sum(read_times) from
+        <include refid="table_name"/>
+        <where>
+            <include refid="condition_sql"/>
+        </where>
+    </select>
+
+
+
+    <select id="list" parameterType="java.util.Map" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List"/>
+        from
+        <include refid="table_name"/>
+        <where>
+            <include refid="condition_sql"/>
+        </where>
+    </select>
+
+    <select id="listOrderBy" parameterType="java.util.Map" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List"/>
+        from
+        <include refid="table_name"/>
+        <where>
+            <include refid="condition_sql"/>
+        </where>
+        order by create_time desc
+    </select>
+
+</mapper>

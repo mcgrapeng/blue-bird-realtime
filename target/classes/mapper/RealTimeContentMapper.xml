@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.qihoo.common.realtime.mapper.RealTimeContentMapper">
+    <resultMap id="BaseResultMap" type="com.qihoo.common.realtime.domain.RealTimeContent">
+        <id column="id" jdbcType="INTEGER" property="id"/>
+        <result column="rt_id" jdbcType="BIGINT" property="rtId"/>
+        <result column="content" jdbcType="VARCHAR" property="content"/>
+        <result column="creater" jdbcType="VARCHAR" property="creater"/>
+        <result column="editor" jdbcType="VARCHAR" property="editor"/>
+        <result column="create_time" jdbcType="TIMESTAMP" property="createTime"/>
+        <result column="edit_time" jdbcType="TIMESTAMP" property="editTime"/>
+    </resultMap>
+
+    <sql id="table_name">  rt_news_content </sql>
+
+    <sql id="condition_sql">
+        <if test="rtId != null">and rt_id = #{rtId,jdbcType=INTEGER}</if>
+        <if test="rids != null">
+            and rt_id IN
+            <foreach collection="rids" item="rid" index="index" open="(" close=")" separator=",">
+                #{rid}
+            </foreach>
+        </if>
+    </sql>
+
+    <sql id="Base_Column_List">
+        rt_id,content, creater, create_time,editor,edit_time
+    </sql>
+
+
+    <insert id="insert" useGeneratedKeys="true" keyProperty="id"
+            parameterType="com.qihoo.common.realtime.domain.RealTimeContent">
+        insert into
+        <include refid="table_name"/>
+        (rt_id,content, creater, create_time)
+        values (#{rtId,jdbcType=BIGINT}, #{content,jdbcType=VARCHAR},
+        #{creater,jdbcType=VARCHAR},NOW())
+    </insert>
+
+
+    <update id="updateBy" parameterType="java.util.Map">
+        update
+        <include refid="table_name"/>
+        <trim prefix="set" suffixOverrides=",">
+            <if test="content != null and content != ''">content = #{content,jdbcType=VARCHAR},</if>
+            editor = #{editor,jdbcType=VARCHAR},
+            edit_time = NOW()
+        </trim>
+        where rt_id = #{rtId,jdbcType=BIGINT}
+    </update>
+
+
+    <select id="get" parameterType="java.util.Map" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List"/>
+        from
+        <include refid="table_name"/>
+        <where>
+            <include refid="condition_sql"/>
+        </where>
+    </select>
+
+
+    <select id="list" parameterType="java.util.Map" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List"/>
+        from
+        <include refid="table_name"/>
+        <where>
+            <include refid="condition_sql"/>
+        </where>
+    </select>
+
+
+    <delete id="deleteBy" parameterType="java.util.Map">
+        delete from
+        <include refid="table_name"/>
+        where rt_id = #{rtId,jdbcType=BIGINT}
+    </delete>
+
+
+</mapper>

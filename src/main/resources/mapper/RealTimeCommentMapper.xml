@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.bird.common.realtime.mapper.RealTimeCommentMapper">
+    <resultMap id="BaseResultMap" type="com.bird.common.realtime.domain.RealTimeComment">
+        <id column="id" jdbcType="INTEGER" property="id"/>
+        <result column="app_type" jdbcType="VARCHAR" property="appType"/>
+
+        <result column="cid" jdbcType="BIGINT" property="cid"/>
+        <result column="pid" jdbcType="BIGINT" property="pid"/>
+        <result column="root_id" jdbcType="BIGINT" property="rootId"/>
+        <result column="content" jdbcType="VARCHAR" property="content"/>
+
+        <result column="rt_id" jdbcType="BIGINT" property="rtId"/>
+        <result column="rt_type" jdbcType="VARCHAR" property="rtType"/>
+        <result column="rt_info_type" jdbcType="VARCHAR" property="rtInfoType"/>
+
+        <result column="info_type" jdbcType="VARCHAR" property="infoType"/>
+        <result column="user_id" jdbcType="BIGINT" property="userId"/>
+        <result column="user_name" jdbcType="VARCHAR" property="userName"/>
+        <result column="is_close" jdbcType="CHAR" property="isClose"/>
+        <result column="comment_user_id" jdbcType="BIGINT" property="commentUserId"/>
+        <result column="comment_user_name" jdbcType="VARCHAR" property="commentUserName"/>
+        <result column="comment_org_name" jdbcType="VARCHAR" property="commentOrgName"/>
+        <result column="comment_user_head_img" jdbcType="VARCHAR" property="commentUserHeadImg"/>
+
+
+        <result column="creater" jdbcType="VARCHAR" property="creater"/>
+        <result column="editor" jdbcType="VARCHAR" property="editor"/>
+        <result column="create_time" jdbcType="TIMESTAMP" property="createTime"/>
+        <result column="edit_time" jdbcType="TIMESTAMP" property="editTime"/>
+    </resultMap>
+
+    <sql id="table_name">  rt_comm </sql>
+
+    <sql id="condition_sql">
+        <if test="nePid != null">and pid <![CDATA[ <> ]]> #{nePid,jdbcType=BIGINT}</if>
+        <if test="cid != null">and cid = #{cid,jdbcType=BIGINT}</if>
+        <if test="cids != null">
+            and cid IN
+            <foreach collection="cids" item="cid" index="index" open="(" close=")" separator=",">
+                #{cid}
+            </foreach>
+        </if>
+        <if test="appType != null and appType != ''">and app_type = #{appType,jdbcType=VARCHAR}</if>
+        <if test="pid != null">and pid = #{pid,jdbcType=BIGINT}</if>
+        <if test="rootId != null">and root_id = #{rootId,jdbcType=BIGINT}</if>
+        <if test="rtId != null">and rt_id = #{rtId,jdbcType=BIGINT}</if>
+        <if test="commentUserId != null">and comment_user_id = #{commentUserId,jdbcType=BIGINT}</if>
+        <if test="isClose != null and isClose != ''">and is_close = #{isClose,jdbcType=CHAR}</if>
+
+        <choose>
+            <when test="startTime != null and startTime !='' and endTime != null and endTime !='' ">
+                and create_time between #{startTime} and #{endTime}
+            </when>
+            <when test="startTime != null and startTime !='' ">
+                and create_time >= #{startTime,jdbcType=TIMESTAMP}
+            </when>
+            <when test="endTime != null and endTime !='' ">
+                and create_time <![CDATA[ <= ]]>  #{endTime,jdbcType=TIMESTAMP}
+            </when>
+        </choose>
+
+        <if test="content != null and content !=''">and content like #{content,jdbcType=VARCHAR}</if>
+    </sql>
+
+    <sql id="Base_Column_List">
+         app_type,cid,pid,root_id,rt_id, info_type, rt_type ,rt_info_type,user_id, user_name,comment_user_id
+        , is_close,comment_user_name,comment_org_name,comment_user_head_img,content,creater,editor,create_time, edit_time
+     </sql>
+
+
+    <select id="get" parameterType="java.util.Map" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List"/>
+        from
+        <include refid="table_name"/>
+        <where>
+            <include refid="condition_sql"/>
+        </where>
+    </select>
+
+
+    <delete id="deleteBy" parameterType="java.util.Map">
+        delete from
+        <include refid="table_name"/>
+        where app_type = #{appType,jdbcType=VARCHAR}
+        <if test="cid != null">and cid = #{cid,jdbcType=BIGINT}</if>
+        <if test="pid != null">and pid = #{pid,jdbcType=BIGINT}</if>
+        <if test="rootId != null">and root_id = #{rootId,jdbcType=BIGINT}</if>
+        <if test="rtId != null">and rt_id = #{rtId,jdbcType=BIGINT}</if>
+        <if test="commentUserId != null">and comment_user_id = #{commentUserId,jdbcType=BIGINT}</if>
+    </delete>
+
+
+    <insert id="insert" useGeneratedKeys="true" keyProperty="id"
+            parameterType="com.bird.common.realtime.domain.RealTimeComment">
+        insert into
+        <include refid="table_name"/>
+        (app_type,cid,pid,root_id,rt_id, is_close, info_type ,rt_type,rt_info_type, user_id, user_name,comment_user_id
+        ,comment_user_name,comment_org_name,comment_user_head_img,
+        content,creater,create_time)
+        values (
+        #{appType,jdbcType=VARCHAR}
+        ,#{cid,jdbcType=BIGINT}
+        ,#{pid,jdbcType=BIGINT}
+        ,#{rootId,jdbcType=BIGINT}
+        ,#{rtId,jdbcType=BIGINT}
+        ,#{isClose,jdbcType=VARCHAR}
+        ,#{infoType,jdbcType=VARCHAR}
+        ,#{rtType,jdbcType=VARCHAR}
+        ,#{rtInfoType,jdbcType=VARCHAR}
+        ,#{userId,jdbcType=BIGINT}
+        ,#{userName,jdbcType=VARCHAR}
+        ,#{commentUserId,jdbcType=BIGINT}
+        ,#{commentUserName,jdbcType=VARCHAR}
+        ,#{commentOrgName,jdbcType=VARCHAR}
+        ,#{commentUserHeadImg,jdbcType=VARCHAR}
+        ,#{content,jdbcType=VARCHAR}
+        ,#{creater,jdbcType=VARCHAR},NOW())
+    </insert>
+
+    <select id="count" parameterType="java.util.Map" resultType="java.lang.Integer">
+        select count(*) from
+        <include refid="table_name"/>
+        <where>
+            <include refid="condition_sql"/>
+        </where>
+    </select>
+
+
+    <select id="list" parameterType="java.util.Map" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List"/>
+        from
+        <include refid="table_name"/>
+        <where>
+            <include refid="condition_sql"/>
+        </where>
+    </select>
+
+
+    <update id="updateClose">
+        update
+        <include refid="table_name"/>
+        set
+        is_close = #{isClose,jdbcType=CHAR},
+        editor = #{editor,jdbcType=VARCHAR},
+        edit_time = NOW()
+        where cid = #{cid,jdbcType=BIGINT} and app_type = #{appType,jdbcType=VARCHAR}
+    </update>
+
+
+</mapper>

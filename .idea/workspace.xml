@@ -1,0 +1,1359 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="643a3aa8-efe4-45ab-a791-693bca9dcd56" name="Default" comment="" />
+    <ignored path="$PROJECT_DIR$/out/" />
+    <ignored path="$PROJECT_DIR$/target/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
+          <provider editor-type-id="MavenHelperPluginDependencyAnalyzer" />
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="187">
+              <caret line="65" column="32" selection-start-line="65" selection-start-column="32" selection-end-line="65" selection-end-column="32" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ReadMe.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/qihoo/common/realtime/ReadMe.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="187">
+              <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MessLikeService.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/qihoo/common/realtime/service/noti/MessLikeService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="578">
+              <caret line="51" column="81" selection-start-line="51" selection-start-column="81" selection-end-line="51" selection-end-column="81" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RealTimeMessage.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/qihoo/common/realtime/service/noti/RealTimeMessage.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="204">
+              <caret line="22" column="13" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MessCommService.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/qihoo/common/realtime/service/noti/MessCommService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="646">
+              <caret line="51" column="28" selection-start-line="51" selection-start-column="28" selection-end-line="51" selection-end-column="28" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="bootstrap.yml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/bootstrap.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="85">
+              <caret line="5" column="28" selection-start-line="5" selection-start-column="28" selection-end-line="5" selection-end-column="28" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="logback-spring.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/logback-spring.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="111">
+              <caret line="125" column="27" lean-forward="true" selection-start-line="125" selection-start-column="27" selection-end-line="125" selection-end-column="27" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BlueBirdCommonInfoflowServiceApplication.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/qihoo/common/realtime/BlueBirdCommonInfoflowServiceApplication.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="102">
+              <caret line="9" column="31" lean-forward="true" selection-start-line="9" selection-start-column="31" selection-end-line="9" selection-end-column="31" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="bootstrap-dev.yml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/bootstrap-dev.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="7" column="32" lean-forward="true" selection-start-line="7" selection-start-column="14" selection-end-line="7" selection-end-column="32" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="bootstrap-prod.yml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/bootstrap-prod.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="187">
+              <caret line="11" column="9" lean-forward="true" selection-start-line="11" selection-start-column="9" selection-end-line="11" selection-end-column="9" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Enum" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>IUserQueryFutureService userQueryService</find>
+      <find>JWTHelper</find>
+      <find>condition_sql</find>
+      <find>topTime</find>
+      <find>top_time</find>
+      <find>top</find>
+      <find>rtId</find>
+      <find>updateClose</find>
+      <find>close</find>
+      <find>cacheCallback</find>
+      <find>web</find>
+      <find>KafkaTopics</find>
+      <find>startSubmitTime</find>
+      <find>2.7.4.1</find>
+      <find>dubbo</find>
+      <find>isClose</find>
+      <find>sso</find>
+      <find>cacheCallback.decrCOMM</find>
+      <find>sec</find>
+      <find>findCommentByCid</find>
+      <find>CLAIM_KEY_APP</find>
+      <find>JWTH</find>
+      <find>\{\n      \n        string apptype \= webutils\.getapptype\(\)\;\n\n        map\&lt;string\, object\&gt; params \= maps\.newhashmap\(\)\;\n        params\.put\(\&quot;rtid\&quot;\, rid\)\;\n        params\.put\(\&quot;apptype\&quot;\, apptype\)\;\n        mapper\.deleteby\(params\)\;\n\n        \/\/删除资讯的所有评论\n        cachecallback\.delmatch\(conts\.realtimecount\.comm\.name\(\)\, apptype\, rid\)\;\n    \}</find>
+      <find>JWTHelper.getAuthorization()</find>
+      <find>threadPoolTaskExecutor.execute</find>
+      <find>threadPoolTaskExecutor</find>
+      <find>userId == -1</find>
+      <find>securty</find>
+      <find>QIHOO</find>
+      <find>qihoo</find>
+    </findStrings>
+    <replaceStrings>
+      <replace />
+      <replace>bird</replace>
+    </replaceStrings>
+    <dirStrings>
+      <dir>E:\blue-bird-realtime\src\main\java\com\qihoo\common\realtime</dir>
+    </dirStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="dev" />
+      </map>
+    </option>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/main/java/com/qihoo/common/realtime/service/RealTimeResult.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/qihoo/common/realtime/utils/Block.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/qihoo/common/realtime/utils/Point.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/qihoo/common/realtime/utils/Harrystair.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/qihoo/common/realtime/mq/SSOUserInfoConsumer.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/mapper/RealTimeNewsMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/qihoo/common/realtime/domain/RealTime.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/mapper/RealTimeCommentMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/qihoo/common/realtime/mapper/RealTimeCommentMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/qihoo/common/realtime/service/comment/CommentClose.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/qihoo/common/realtime/controller/manage/RealTimeCommentManageController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/qihoo/common/realtime/mq/KafkaTopics.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/mapper/RealTimeMomentsMapper.xml" />
+        <option value="$PROJECT_DIR$/bak/application-dev.yml" />
+        <option value="$PROJECT_DIR$/bak/application.yml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/qihoo/common/realtime/service/IRealTimeManageService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/qihoo/common/realtime/service/ment/RealTimeMentManageService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/qihoo/common/realtime/service/news/RealTimeNewsForm.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/qihoo/common/realtime/QihooCommonInfoflowServiceApplication.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/qihoo/common/realtime/config/KafkaTopicsProperties.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/qihoo/common/realtime/config/KafkaGroupProperties.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/qihoo/common/realtime/config/RealTimeKafkaConfiguration.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/qihoo/common/realtime/mq/RealTimeConsumer.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/qihoo/common/realtime/service/RealTimeManageResult.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/qihoo/common/realtime/controller/manage/RealTimeManageController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/qihoo/common/realtime/service/noti/RealTimeMessPersist.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/qihoo/common/realtime/service/RealTimeResourceResult.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/qihoo/common/realtime/service/like/RealTimeLikeQueryService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/qihoo/common/realtime/service/news/RealTimeNewsService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/qihoo/common/realtime/service/comment/RealTimeCommQueryService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/qihoo/common/realtime/controller/RealTimeController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/qihoo/common/realtime/controller/RealTimeMessageController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/qihoo/common/realtime/service/comment/RealTimeCommManageService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/qihoo/common/realtime/service/read/RealTimeReadService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/qihoo/common/realtime/service/tran/RealTimeTranManageService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/qihoo/common/realtime/service/RealTimeAsyncService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/qihoo/common/realtime/service/tran/RealTimeTranService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/qihoo/common/realtime/service/noti/RealTimeMessService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/qihoo/common/realtime/service/like/RealTimeLikeService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/qihoo/common/realtime/service/read/RealTimeReadManageService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/qihoo/common/realtime/service/comment/RealTimeCommService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/qihoo/common/realtime/service/news/RealTimeNewsManageService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/qihoo/common/realtime/service/RealTimeService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/qihoo/common/realtime/service/ment/RealTimeMentService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/qihoo/common/realtime/service/noti/MessLikeService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/qihoo/common/realtime/service/noti/MessCommService.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/resources/bootstrap-dev.yml" />
+        <option value="$PROJECT_DIR$/src/main/resources/bootstrap-prod.yml" />
+        <option value="$PROJECT_DIR$/src/main/resources/bootstrap.yml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/qihoo/common/realtime/BlueBirdCommonInfoflowServiceApplication.java" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="E:/../../apache-maven-3.3.9" />
+      </MavenGeneralSettings>
+    </option>
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+    <option name="enabledProfiles">
+      <list>
+        <option value="dev" />
+      </list>
+    </option>
+  </component>
+  <component name="MavenProjectNavigator">
+    <treeState>
+      <expand />
+      <select />
+    </treeState>
+  </component>
+  <component name="MavenRunner">
+    <option name="skipTests" value="true" />
+  </component>
+  <component name="NodePackageJsonFileManager">
+    <packageJsonPaths />
+  </component>
+  <component name="PhpDebugGeneral" listening_started="true" />
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="x" value="-12" />
+    <option name="y" value="-12" />
+    <option name="width" value="1944" />
+    <option name="height" value="1044" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="PackagesPane" />
+      <pane id="AndroidView" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="blue-bird-realtime" type="b2602c69:ProjectViewProjectNode" />
+              <item name="blue-bird-realtime" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="blue-bird-realtime" type="b2602c69:ProjectViewProjectNode" />
+              <item name="blue-bird-realtime" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="blue-bird-realtime" type="b2602c69:ProjectViewProjectNode" />
+              <item name="blue-bird-realtime" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="blue-bird-realtime" type="b2602c69:ProjectViewProjectNode" />
+              <item name="blue-bird-realtime" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="blue-bird-realtime" type="b2602c69:ProjectViewProjectNode" />
+              <item name="blue-bird-realtime" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="realtime" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="blue-bird-realtime" type="b2602c69:ProjectViewProjectNode" />
+              <item name="blue-bird-realtime" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="blue-bird-realtime" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="dynamic.classpath" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="MavenSettings" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.qihoo.common.realtime.config" />
+      <recent name="com.qihoo.common.realtime.mq" />
+      <recent name="com.qihoo.common.realtime.service.comment" />
+      <recent name="com.qihoo.common.realtime.service.ment" />
+      <recent name="com.qihoo.common.realtime.enums" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\developer\qihoo\qihoo-common\qihoo-common-realtime-service\src\main\java\com\qihoo\common\realtime\mq" />
+      <recent name="E:\developer\qihoo\qihoo-common\qihoo-common-realtime-service\src\main\resources" />
+      <recent name="E:\developer\qihoo\qihoo-common\qihoo-common-realtime-service\bak" />
+      <recent name="E:\developer\qihoo\qihoo-common\qihoo-common-realtime-service\src\main\resources\mapper" />
+      <recent name="E:\developer\qihoo\qihoo-common\qihoo-common-realtime-service\src\main\java\com\qihoo\common\realtime\service\noti" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Spring Boot.QihooCommonInfoflowServiceApplication">
+    <configuration name="Harrystair" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.qihoo.common.realtime.utils.Harrystair" />
+      <module name="blue-bird-realtime" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.qihoo.common.realtime.utils.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+    </configuration>
+    <configuration name="RealTimeVideoController" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.qihoo.common.realtime.controller.RealTimeVideoController" />
+      <module name="blue-bird-realtime" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.qihoo.common.realtime.controller.manage.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+    </configuration>
+    <configuration default="true" type="Application" factoryName="Application">
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+    </configuration>
+    <configuration name="MainTest.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="blue-bird-realtime" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.qihoo.common.realtime.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.qihoo.common.realtime" />
+      <option name="MAIN_CLASS_NAME" value="com.qihoo.common.realtime.MainTest" />
+      <option name="METHOD_NAME" value="test" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+    </configuration>
+    <configuration name="MainTest.test01" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="blue-bird-realtime" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.qihoo.common.realtime.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.qihoo.common.realtime" />
+      <option name="MAIN_CLASS_NAME" value="com.qihoo.common.realtime.MainTest" />
+      <option name="METHOD_NAME" value="test01" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+    </configuration>
+    <configuration name="BlueBirdCommonInfoflowServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="blue-bird-realtime" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.bird.common.realtime.BlueBirdCommonInfoflowServiceApplication" />
+    </configuration>
+    <configuration name="QihooCommonInfoflowServiceApplication (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="blue-bird-realtime" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.qihoo.common.service.QihooCommonInfoflowServiceApplication" />
+    </configuration>
+    <configuration name="QihooCommonInfoflowServiceApplication (2)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="blue-bird-realtime" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.qihoo.common.realtime.service.QihooCommonInfoflowServiceApplication" />
+    </configuration>
+    <configuration name="QihooCommonInfoflowServiceApplication (3)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="blue-bird-realtime" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.qihoo.common.realtime.BlueBirdCommonInfoflowServiceApplication" />
+    </configuration>
+    <configuration name="QihooCommonInfoflowServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="blue-bird-realtime" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.qihoo.common.realtime.BlueBirdCommonInfoflowServiceApplication" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="UPDATE_ACTION_UPDATE_POLICY" value="UpdateClassesAndResources" />
+      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
+    </configuration>
+    <configuration default="true" type="TestNG" factoryName="TestNG">
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <properties />
+      <listeners />
+    </configuration>
+    <list>
+      <item itemvalue="Spring Boot.QihooCommonInfoflowServiceApplication" />
+      <item itemvalue="Spring Boot.QihooCommonInfoflowServiceApplication (1)" />
+      <item itemvalue="Spring Boot.QihooCommonInfoflowServiceApplication (2)" />
+      <item itemvalue="Spring Boot.QihooCommonInfoflowServiceApplication (3)" />
+      <item itemvalue="Application.RealTimeVideoController" />
+      <item itemvalue="JUnit.MainTest.test" />
+      <item itemvalue="JUnit.MainTest.test01" />
+      <item itemvalue="Application.Harrystair" />
+      <item itemvalue="Spring Boot.BlueBirdCommonInfoflowServiceApplication" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Harrystair" />
+        <item itemvalue="JUnit.MainTest.test01" />
+        <item itemvalue="JUnit.MainTest.test" />
+        <item itemvalue="Application.RealTimeVideoController" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="643a3aa8-efe4-45ab-a791-693bca9dcd56" name="Default" comment="" />
+      <created>1607566525534</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1607566525534</updated>
+      <workItem from="1607566528382" duration="15079000" />
+      <workItem from="1607583820395" duration="6649000" />
+      <workItem from="1607595772539" duration="4312000" />
+      <workItem from="1607652139633" duration="15871000" />
+      <workItem from="1608027796591" duration="23108000" />
+      <workItem from="1608256460345" duration="61059000" />
+      <workItem from="1608715443431" duration="50626000" />
+      <workItem from="1609989712406" duration="1276000" />
+      <workItem from="1610089181267" duration="672000" />
+      <workItem from="1610346634057" duration="40000" />
+      <workItem from="1610533151668" duration="624000" />
+      <workItem from="1614327813492" duration="6610000" />
+      <workItem from="1614566330081" duration="1813000" />
+      <workItem from="1614580348780" duration="29250000" />
+      <workItem from="1615362072817" duration="36275000" />
+      <workItem from="1615774336863" duration="3441000" />
+      <workItem from="1615863112416" duration="15917000" />
+      <workItem from="1616381415082" duration="77652000" />
+      <workItem from="1617089309705" duration="2106000" />
+      <workItem from="1617099536295" duration="3215000" />
+      <workItem from="1617157908924" duration="20665000" />
+      <workItem from="1617243640582" duration="6912000" />
+      <workItem from="1617675166734" duration="22301000" />
+      <workItem from="1617760895173" duration="1545000" />
+      <workItem from="1617786821526" duration="6840000" />
+      <workItem from="1617934586543" duration="14848000" />
+      <workItem from="1618193862194" duration="1257000" />
+      <workItem from="1618208741875" duration="14529000" />
+      <workItem from="1618279389946" duration="6153000" />
+      <workItem from="1618295371254" duration="12195000" />
+      <workItem from="1618451883262" duration="591000" />
+      <workItem from="1618467779936" duration="16392000" />
+      <workItem from="1618906124258" duration="2051000" />
+      <workItem from="1619159034673" duration="2879000" />
+      <workItem from="1620637732098" duration="45769000" />
+      <workItem from="1621234582263" duration="2033000" />
+      <workItem from="1621306755140" duration="48823000" />
+      <workItem from="1622714290034" duration="6237000" />
+      <workItem from="1622772620937" duration="5812000" />
+      <workItem from="1622804121605" duration="5161000" />
+      <workItem from="1623209744812" duration="27240000" />
+      <workItem from="1623895601953" duration="1202000" />
+      <workItem from="1623989651550" duration="9310000" />
+      <workItem from="1624851788710" duration="650000" />
+      <workItem from="1624932619359" duration="20497000" />
+      <workItem from="1625453167678" duration="3713000" />
+      <workItem from="1625459045821" duration="94000" />
+      <workItem from="1625459163336" duration="323000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TestHistory">
+    <history-entry file="MainTest_test - 2021.05.14 at 18h 03m 47s.xml">
+      <configuration name="MainTest.test" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MainTest_test - 2021.05.14 at 18h 06m 38s.xml">
+      <configuration name="MainTest.test" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MainTest_test - 2021.05.14 at 18h 09m 32s.xml">
+      <configuration name="MainTest.test" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MainTest_test - 2021.05.14 at 18h 10m 49s.xml">
+      <configuration name="MainTest.test" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MainTest_test - 2021.05.14 at 18h 16m 42s.xml">
+      <configuration name="MainTest.test" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MainTest_test - 2021.05.14 at 18h 20m 25s.xml">
+      <configuration name="MainTest.test" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MainTest_test - 2021.05.14 at 18h 22m 32s.xml">
+      <configuration name="MainTest.test" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MainTest_test01 - 2021.05.19 at 12h 54m 27s.xml">
+      <configuration name="MainTest.test01" configurationId="JUnit" />
+    </history-entry>
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="661617000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
+    <layout>
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="bottom" id="Event Log" order="13" sideWeight="0.41875505" side_tool="true" weight="0.19680852" />
+      <window_info anchor="right" id="Maven Projects" order="8" visible="true" weight="0.099434115" />
+      <window_info anchor="bottom" id="Database Changes" order="10" show_stripe_button="false" />
+      <window_info id="Capture Tool" order="8" />
+      <window_info id="Designer" order="2" />
+      <window_info anchor="right" id="Database" order="5" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info id="UI Designer" order="4" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.497979" weight="0.53723407" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="right" id="Palette&#9;" order="6" />
+      <window_info id="Image Layers" order="3" />
+      <window_info anchor="bottom" id="Java Enterprise" order="9" />
+      <window_info anchor="right" id="Capture Analysis" order="4" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4987874" weight="0.5053192" />
+      <window_info anchor="bottom" id="Version Control" order="11" weight="0.2216312" />
+      <window_info anchor="bottom" id="Spring" order="7" />
+      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.58124495" visible="true" weight="0.27482268" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.28536782" />
+      <window_info anchor="right" id="Bean Validation" order="9" side_tool="true" weight="0.1301536" />
+      <window_info id="Web" order="7" side_tool="true" />
+      <window_info anchor="bottom" id="Alibaba Cloud View" order="12" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info id="Alibaba Cloud Explorer" order="6" />
+      <window_info anchor="right" id="Theme Preview" order="7" />
+      <window_info id="Favorites" order="5" side_tool="true" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Messages" order="14" weight="0.2251773" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+    </layout>
+    <layout-to-restore>
+      <window_info id="Designer" order="2" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="bottom" id="Spring" order="7" />
+      <window_info id="Image Layers" order="3" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4987874" weight="0.5053192" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info id="UI Designer" order="4" />
+      <window_info id="Favorites" order="5" side_tool="true" />
+      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.58124495" visible="true" weight="0.20212767" />
+      <window_info id="Capture Tool" order="8" />
+      <window_info anchor="right" id="Capture Analysis" order="4" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="bottom" id="Event Log" order="13" sideWeight="0.41875505" side_tool="true" weight="0.19680852" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Database" order="5" />
+      <window_info anchor="bottom" id="Java Enterprise" order="9" />
+      <window_info anchor="bottom" id="Database Changes" order="10" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="11" weight="0.33333334" />
+      <window_info id="Alibaba Cloud Explorer" order="6" />
+      <window_info anchor="right" id="Maven Projects" order="8" weight="0.13985449" />
+      <window_info anchor="bottom" id="Alibaba Cloud View" order="12" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.28698465" />
+      <window_info anchor="bottom" id="Messages" order="14" weight="0.2251773" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info id="Web" order="7" side_tool="true" />
+      <window_info anchor="right" id="Palette&#9;" order="6" />
+      <window_info anchor="right" id="Theme Preview" order="7" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="right" id="Bean Validation" order="9" side_tool="true" weight="0.1301536" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.497979" weight="0.53723407" />
+    </layout-to-restore>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ORDER">
+      <list>
+        <option value="0" />
+        <option value="2" />
+        <option value="3" />
+        <option value="1" />
+      </list>
+    </option>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/qihoo/common/realtime/service/comment/RealTimeCommService.java</url>
+          <line>326</line>
+          <properties />
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/qihoo/common/realtime/service/news/RealTimeNewsManageService.java</url>
+          <line>229</line>
+          <properties />
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/com/qihoo/common/web/qihoo-common-web/2.41-SNAPSHOT/qihoo-common-web-2.41-20210309.113820-1.jar!/com/qihoo/common/web/mapper/BaseService.class</url>
+          <line>41</line>
+          <properties />
+          <option name="timeStamp" value="12" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/com/qihoo/video/qihoo-helper-video/1.0-SNAPSHOT/qihoo-helper-video-1.0-20210330.062659-25.jar!/com/qihoo/common/tools/video/VideoUtils.class</url>
+          <line>42</line>
+          <properties />
+          <option name="timeStamp" value="21" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/com/qihoo/video/qihoo-helper-video/1.0-SNAPSHOT/qihoo-helper-video-1.0-20210330.062659-25.jar!/com/qihoo/common/tools/video/VideoUtils.class</url>
+          <line>43</line>
+          <properties />
+          <option name="timeStamp" value="22" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/com/qihoo/video/qihoo-helper-video/1.0-SNAPSHOT/qihoo-helper-video-1.0-20210330.062659-25.jar!/com/qihoo/common/tools/video/VideoUtils.class</url>
+          <line>56</line>
+          <properties />
+          <option name="timeStamp" value="23" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/com/qihoo/video/qihoo-helper-video/1.0-SNAPSHOT/qihoo-helper-video-1.0-20210330.062659-25.jar!/com/qihoo/common/tools/video/VideoUtils.class</url>
+          <line>82</line>
+          <properties />
+          <option name="timeStamp" value="24" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/com/qihoo/common/tools/video/qihoo-helper-video/1.1-SNAPSHOT/qihoo-helper-video-1.1-20210330.102111-9.jar!/com/qihoo/common/tools/video/VideoService.class</url>
+          <line>24</line>
+          <properties />
+          <option name="timeStamp" value="26" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/com/qihoo/common/tools/video/qihoo-helper-video/1.1-SNAPSHOT/qihoo-helper-video-1.1-20210330.102111-9.jar!/com/qihoo/common/tools/video/VideoS3Object.class</url>
+          <line>78</line>
+          <properties />
+          <option name="timeStamp" value="27" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/com/qihoo/common/tools/video/qihoo-helper-video/1.1-SNAPSHOT/qihoo-helper-video-1.1-20210331.075930-24.jar!/com/qihoo/common/tools/video/VideoUtils.class</url>
+          <line>61</line>
+          <properties />
+          <option name="timeStamp" value="44" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/com/qihoo/common/tools/video/qihoo-helper-video/1.1-SNAPSHOT/qihoo-helper-video-1.1-20210331.075930-24.jar!/com/qihoo/common/tools/video/AbstractVideoController.class</url>
+          <line>25</line>
+          <properties />
+          <option name="timeStamp" value="45" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/com/qihoo/common/tools/video/qihoo-helper-video/1.1-SNAPSHOT/qihoo-helper-video-1.1-20210331.080907-25.jar!/com/qihoo/common/tools/video/AbstractVideoController.class</url>
+          <line>29</line>
+          <properties />
+          <option name="timeStamp" value="46" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/com/qihoo/common/tools/video/qihoo-helper-video/1.1-SNAPSHOT/qihoo-helper-video-1.1-20210331.085120-26.jar!/com/qihoo/common/tools/video/VideoUtils.class</url>
+          <line>61</line>
+          <properties />
+          <option name="timeStamp" value="47" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/com/qihoo/common/tools/video/qihoo-helper-video/1.1-SNAPSHOT/qihoo-helper-video-1.1-20210331.085120-26.jar!/com/qihoo/common/tools/video/VideoUtils.class</url>
+          <line>62</line>
+          <properties />
+          <option name="timeStamp" value="48" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/com/qihoo/common/tools/video/qihoo-helper-video/1.1-SNAPSHOT/qihoo-helper-video-1.1-20210331.095119-33.jar!/com/qihoo/common/tools/video/AbstractVideoController.class</url>
+          <line>30</line>
+          <properties />
+          <option name="timeStamp" value="50" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/com/qihoo/common/tools/qihoo-helper-video/1.2-SNAPSHOT/qihoo-helper-video-1.2-20210406.021419-10.jar!/com/qihoo/common/tools/video/VideoService.class</url>
+          <line>24</line>
+          <properties />
+          <option name="timeStamp" value="52" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/com/qihoo/common/tools/qihoo-helper-video/1.2-SNAPSHOT/qihoo-helper-video-1.2-20210406.021419-10.jar!/com/qihoo/common/tools/video/VideoService.class</url>
+          <line>26</line>
+          <properties />
+          <option name="timeStamp" value="53" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/com/qihoo/common/tools/qihoo-helper-video/1.2-SNAPSHOT/qihoo-helper-video-1.2-20210406.025555-11.jar!/com/qihoo/common/tools/video/VideoService.class</url>
+          <line>25</line>
+          <properties />
+          <option name="timeStamp" value="54" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/qihoo/common/realtime/service/noti/RealTimeMessService.java</url>
+          <line>136</line>
+          <properties />
+          <option name="timeStamp" value="62" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/qihoo/common/realtime/service/noti/RealTimeMessService.java</url>
+          <line>157</line>
+          <properties>
+            <option name="lambda-ordinal" value="-1" />
+          </properties>
+          <option name="timeStamp" value="63" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/qihoo/common/realtime/service/noti/MessCommService.java</url>
+          <line>90</line>
+          <properties />
+          <option name="timeStamp" value="71" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/qihoo/common/realtime/service/noti/MessCommService.java</url>
+          <line>95</line>
+          <properties />
+          <option name="timeStamp" value="80" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/qihoo/common/realtime/service/noti/RealTimeMessService.java</url>
+          <line>70</line>
+          <properties />
+          <option name="timeStamp" value="91" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/qihoo/common/realtime/service/news/RealTimeNewsManageService.java</url>
+          <line>256</line>
+          <properties />
+          <option name="timeStamp" value="93" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/qihoo/common/realtime/controller/manage/RealTimeManageController.java</url>
+          <line>212</line>
+          <properties />
+          <option name="timeStamp" value="94" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/qihoo/common/realtime/service/like/RealTimeLikeService.java</url>
+          <line>138</line>
+          <properties />
+          <option name="timeStamp" value="100" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/qihoo/common/realtime/controller/RealTimeLikeController.java</url>
+          <line>39</line>
+          <properties />
+          <option name="timeStamp" value="101" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/com/qihoo/common/security/qihoo-common-security-gateway/1.0-SNAPSHOT/qihoo-common-security-gateway-1.0-20210623.022725-9.jar!/com/qihoo/common/security/JWTRefreshSuccessHandler.class</url>
+          <line>22</line>
+          <properties />
+          <option name="timeStamp" value="104" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/com/qihoo/common/web/qihoo-common-web-nacos/1.0-SNAPSHOT/qihoo-common-web-nacos-1.0-20210609.142003-34.jar!/com/qihoo/common/web/security/JWTHelper.class</url>
+          <line>163</line>
+          <properties />
+          <option name="timeStamp" value="112" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/com/qihoo/common/web/qihoo-common-web-nacos/1.0-SNAPSHOT/qihoo-common-web-nacos-1.0-20210609.142003-34.jar!/com/qihoo/common/web/security/JWTHelper.class</url>
+          <line>181</line>
+          <properties />
+          <option name="timeStamp" value="113" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/qihoo/common/realtime/service/noti/MessCommService.java</url>
+          <line>65</line>
+          <properties />
+          <option name="timeStamp" value="117" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/qihoo/common/realtime/service/noti/MessCommService.java</url>
+          <line>76</line>
+          <properties />
+          <option name="timeStamp" value="118" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="120" />
+    </breakpoint-manager>
+  </component>
+  <component name="debuggerHistoryManager">
+    <expressions id="evaluateExpression">
+      <expression>
+        <expression-string>String.format(&quot;http://transcode.live.360.cn?r=%s&amp;sname=%s&quot;, System.currentTimeMillis(), &quot;qihoo_common_vedio&quot;)</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>this.s3.getVideoUrl(key)</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+    </expressions>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/qihoo/common/realtime/controller/RealTimeCommentController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="229">
+          <caret line="81" column="25" lean-forward="true" selection-start-line="81" selection-start-column="25" selection-end-line="81" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/qihoo/common/realtime/enums/InfoTypeEnum.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="12" selection-start-line="5" selection-start-column="12" selection-end-line="5" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/qihoo/common/realtime/domain/RealTimeComment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="63" column="19" selection-start-line="63" selection-start-column="19" selection-end-line="63" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/qihoo/common/realtime/service/RealTimeFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="49" column="33" selection-start-line="49" selection-start-column="33" selection-end-line="49" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/qihoo/common/realtime/service/RealTimeResourceResult.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="467">
+          <caret line="245" column="24" selection-start-line="245" selection-start-column="24" selection-end-line="245" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/qihoo/common/realtime/service/comment/CommentCreate.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="35">
+          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/RealTimeCommentMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-935">
+          <caret line="35" column="24" selection-start-line="35" selection-start-column="24" selection-end-line="35" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/qihoo/common/security/qihoo-common-security/1.5-SNAPSHOT/qihoo-common-security-1.5-20210630.041200-46.jar!/com/qihoo/common/security/LoginFailureHandler.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="22" column="33" selection-start-line="22" selection-start-column="33" selection-end-line="22" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/qihoo/common/web/qihoo-common-web-nacos/1.0-SNAPSHOT/qihoo-common-web-nacos-1.0-20210609.142003-34.jar!/com/qihoo/common/web/intercept/AccessLogInterceptor.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-82">
+          <caret line="23" column="41" selection-start-line="23" selection-start-column="41" selection-end-line="23" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/qihoo/common/realtime/service/noti/RealTimeMessPersist.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="69">
+          <caret line="98" selection-start-line="98" selection-end-line="98" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/qihoo/common/realtime/service/like/RealTimeLikeQueryService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="89">
+          <caret line="28" column="87" selection-start-line="28" selection-start-column="87" selection-end-line="28" selection-end-column="87" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/qihoo/common/realtime/service/news/RealTimeNewsService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="148">
+          <caret line="100" column="3" selection-start-line="100" selection-start-column="3" selection-end-line="100" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/qihoo/common/web/qihoo-common-web-nacos/1.0-SNAPSHOT/qihoo-common-web-nacos-1.0-20210609.142003-34.jar!/com/qihoo/common/web/security/JWTHelper.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="97">
+          <caret line="154" column="25" selection-start-line="154" selection-start-column="25" selection-end-line="154" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/qihoo/common/realtime/service/comment/RealTimeCommQueryService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="106">
+          <caret line="82" column="73" selection-start-line="82" selection-start-column="73" selection-end-line="82" selection-end-column="73" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/qihoo/common/realtime/controller/RealTimeController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="174">
+          <caret line="125" column="53" lean-forward="true" selection-start-line="125" selection-start-column="53" selection-end-line="125" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/qihoo/common/realtime/controller/RealTimeMessageController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="57" column="39" lean-forward="true" selection-start-line="57" selection-start-column="39" selection-end-line="57" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/qihoo/common/realtime/service/comment/RealTimeCommManageService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="112" column="36" lean-forward="true" selection-start-line="112" selection-start-column="36" selection-end-line="112" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/qihoo/common/realtime/controller/RealTimeVideoController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="182">
+          <caret line="28" column="63" lean-forward="true" selection-start-line="28" selection-start-column="63" selection-end-line="28" selection-end-column="63" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/qihoo/common/realtime/service/IRealTimeManageService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="84" selection-start-line="84" selection-end-line="84" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/qihoo/common/realtime/service/ment/RealTimeMentManageService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="137" lean-forward="true" selection-start-line="137" selection-end-line="137" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/qihoo/common/realtime/service/tran/RealTimeTranManageService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="47" column="16" selection-start-line="47" selection-start-column="16" selection-end-line="47" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/qihoo/common/realtime/service/RealTimeAsyncService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="310">
+          <caret line="32" column="28" selection-start-line="32" selection-start-column="28" selection-end-line="32" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/qihoo/common/realtime/service/tran/RealTimeTranService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="229">
+          <caret line="71" column="41" selection-start-line="71" selection-start-column="41" selection-end-line="71" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/qihoo/common/realtime/service/read/RealTimeReadService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="34" column="16" selection-start-line="34" selection-start-column="16" selection-end-line="34" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/qihoo/common/realtime/service/noti/RealTimeMessService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="290">
+          <caret line="156" lean-forward="true" selection-start-line="156" selection-end-line="156" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/qihoo/common/realtime/service/comment/RealTimeCommService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="94">
+          <caret line="377" column="16" selection-start-line="377" selection-start-column="16" selection-end-line="377" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/qihoo/common/realtime/service/read/RealTimeReadManageService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="417">
+          <caret line="106" column="16" selection-start-line="106" selection-start-column="16" selection-end-line="106" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/qihoo/common/realtime/service/news/RealTimeNewsManageService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1336">
+          <caret line="287" selection-start-line="287" selection-end-line="287" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/qihoo/common/realtime/service/news/RealTimeNewsForm.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/qihoo/common/realtime/controller/manage/RealTimeManageController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="174">
+          <caret line="56" column="67" selection-start-line="56" selection-start-column="67" selection-end-line="56" selection-end-column="67" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/qihoo/common/realtime/service/ment/RealTimeMentForm.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="331">
+          <caret line="37" column="19" selection-start-line="37" selection-start-column="19" selection-end-line="37" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/qihoo/common/security/qihoo-common-security/1.5-SNAPSHOT/qihoo-common-security-1.5-20210630.041200-46.jar!/com/qihoo/common/security/WebUtils.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="108" column="23" selection-start-line="108" selection-start-column="23" selection-end-line="108" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/qihoo/common/realtime/controller/RealTimeMentController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="646">
+          <caret line="60" column="27" selection-start-line="60" selection-start-column="27" selection-end-line="60" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/qihoo/common/realtime/service/RealTimeService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1020">
+          <caret line="85" selection-start-line="85" selection-end-line="85" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/qihoo/common/realtime/service/ment/RealTimeMentService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4386">
+          <caret line="298" column="38" selection-start-line="298" selection-start-column="38" selection-end-line="298" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bak/application-prod.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="646">
+          <caret line="38" column="5" selection-start-line="38" selection-start-column="5" selection-end-line="41" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bak/application.yml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/qihoo/common/realtime/controller/RealTimeLikeController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="39" column="34" selection-start-line="39" selection-start-column="34" selection-end-line="39" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/qihoo/common/realtime/service/like/RealTimeLikeService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1819">
+          <caret line="136" column="33" selection-start-line="136" selection-start-column="33" selection-end-line="136" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/qihoo/common/realtime/service/noti/RealTimeMessContext.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="30" column="45" selection-start-line="30" selection-start-column="45" selection-end-line="30" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/qihoo/common/realtime/service/noti/IRealTimeMessService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="9" selection-start-line="11" selection-start-column="9" selection-end-line="11" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/qihoo/common/realtime/service/noti/RealTimeMessage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="22" column="13" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/qihoo/common/realtime/service/noti/MessCommService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="646">
+          <caret line="51" column="28" selection-start-line="51" selection-start-column="28" selection-end-line="51" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/qihoo/common/realtime/service/noti/MessLikeService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="578">
+          <caret line="51" column="81" selection-start-line="51" selection-start-column="81" selection-end-line="51" selection-end-column="81" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider editor-type-id="MavenHelperPluginDependencyAnalyzer" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="65" column="32" selection-start-line="65" selection-start-column="32" selection-end-line="65" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/qihoo/common/realtime/ReadMe.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/bootstrap-prod.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="9" lean-forward="true" selection-start-line="11" selection-start-column="9" selection-end-line="11" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/bootstrap-dev.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="32" lean-forward="true" selection-start-line="7" selection-start-column="14" selection-end-line="7" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/bootstrap.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="28" selection-start-line="5" selection-start-column="28" selection-end-line="5" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/logback-spring.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="111">
+          <caret line="125" column="27" lean-forward="true" selection-start-line="125" selection-start-column="27" selection-end-line="125" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/qihoo/common/realtime/BlueBirdCommonInfoflowServiceApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="9" column="31" lean-forward="true" selection-start-line="9" selection-start-column="31" selection-end-line="9" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>Spring</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>blue-bird-realtime</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>Maven: mysql:mysql-connector-java:8.0.21</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>

@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.bird.common.realtime.mapper.RealTimeTranMapper">
+
+    <resultMap id="BaseResultMap" type="com.bird.common.realtime.domain.RealTimeTran">
+        <id column="id" jdbcType="INTEGER" property="id"/>
+        <result column="app_type" jdbcType="VARCHAR" property="appType"/>
+        <result column="tran_id" jdbcType="BIGINT" property="tranId"/>
+        <result column="rt_id" jdbcType="BIGINT" property="rtId"/>
+        <result column="rt_type" jdbcType="VARCHAR" property="rtType"/>
+        <result column="info_type" jdbcType="VARCHAR" property="infoType"/>
+        <result column="user_id" jdbcType="BIGINT" property="userId"/>
+        <result column="user_name" jdbcType="VARCHAR" property="userName"/>
+        <result column="tran_user_id" jdbcType="BIGINT" property="tranUserId"/>
+        <result column="tran_user_name" jdbcType="VARCHAR" property="tranUserName"/>
+        <result column="tran_user_Head_img" jdbcType="VARCHAR" property="tranUserHeadImg"/>
+        <result column="tran_org_name" jdbcType="VARCHAR" property="tranOrgName"/>
+        <result column="tran_times" jdbcType="INTEGER" property="tranTimes"/>
+        <result column="ip" jdbcType="VARCHAR" property="ip"/>
+        <result column="creater" jdbcType="VARCHAR" property="creater"/>
+        <result column="create_time" jdbcType="TIMESTAMP" property="createTime"/>
+        <result column="editor" jdbcType="VARCHAR" property="editor"/>
+        <result column="edit_time" jdbcType="TIMESTAMP" property="editTime"/>
+    </resultMap>
+
+
+    <sql id="table_name">  rt_tran </sql>
+
+    <sql id="condition_sql">
+        <if test="appType != null and appType != ''">and app_type = #{appType,jdbcType=VARCHAR}</if>
+        <if test="rtId != null">and rt_id = #{rtId,jdbcType=BIGINT}</if>
+        <if test="userId != null">and user_id = #{userId,jdbcType=BIGINT}</if>
+        <if test="tranUserId != null">and tran_user_id = #{tranUserId,jdbcType=BIGINT}</if>
+    </sql>
+
+
+    <sql id="Base_Column_List">
+        app_type, tran_id,rt_id, rt_type,info_type,user_id,tran_user_id,user_name,tran_user_Head_img, tran_user_name,tran_org_name,
+        tran_times,ip,
+        creater,create_time, editor,edit_time
+    </sql>
+
+
+    <select id="get" parameterType="java.util.Map" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List"/>
+        from
+        <include refid="table_name"/>
+        <where>
+            <include refid="condition_sql"/>
+        </where>
+    </select>
+
+
+    <delete id="deleteBy" parameterType="java.util.Map">
+        delete from
+        <include refid="table_name"/>
+        where app_type = #{appType,jdbcType=VARCHAR} and tran_id = #{tranId,jdbcType=BIGINT}
+    </delete>
+
+
+    <insert id="insert" useGeneratedKeys="true" keyProperty="id"
+            parameterType="com.bird.common.realtime.domain.RealTimeTran">
+        insert into
+        <include refid="table_name"/>
+        (app_type,tran_id,rt_id,rt_type,info_type, tran_user_id,tran_user_name,tran_org_name,tran_user_Head_img,user_id,user_name,
+        tran_times,ip,creater,create_time
+        )
+        values (
+        #{appType,jdbcType=VARCHAR}
+        ,#{tranId,jdbcType=BIGINT},#{rtId,jdbcType=BIGINT}
+        ,#{rtType,jdbcType=VARCHAR}
+        ,#{infoType,jdbcType=VARCHAR}
+        ,#{tranUserId,jdbcType=BIGINT}
+        ,#{tranUserName,jdbcType=VARCHAR}
+        ,#{tranOrgName,jdbcType=VARCHAR}
+        ,#{tranUserHeadImg,jdbcType=VARCHAR}
+        ,#{userId,jdbcType=BIGINT}
+        ,#{userName,jdbcType=VARCHAR}
+        ,#{tranTimes,jdbcType=INTEGER}
+        ,#{ip,jdbcType=VARCHAR}
+        ,#{creater,jdbcType=VARCHAR},NOW())
+    </insert>
+
+
+    <update id="update" parameterType="com.bird.common.realtime.domain.RealTimeTran">
+        update
+        <include refid="table_name"/>
+        set
+        tran_times = #{tranTimes,jdbcType=INTEGER},
+        ip = #{ip,jdbcType=VARCHAR},
+        editor = #{editor,jdbcType=VARCHAR},
+        edit_time = NOW()
+        where app_type = #{appType,jdbcType=VARCHAR} and tran_id = #{tranId,jdbcType=BIGINT}
+    </update>
+
+
+    <update id="updateBy" parameterType="java.util.Map">
+        update
+        <include refid="table_name"/>
+        set
+        tran_times = #{tranTimes,jdbcType=INTEGER},
+        ip = #{ip,jdbcType=VARCHAR},
+        editor = #{editor,jdbcType=VARCHAR},
+        edit_time = NOW()
+        where app_type = #{appType,jdbcType=VARCHAR} and tran_id = #{tranId,jdbcType=BIGINT}
+    </update>
+
+
+    <select id="count" parameterType="java.util.Map" resultType="java.lang.Integer">
+        select count(*) from
+        <include refid="table_name"/>
+        <where>
+            <include refid="condition_sql"/>
+        </where>
+    </select>
+
+
+    <select id="sumTranTimes" parameterType="java.util.Map" resultType="java.lang.Integer">
+        select sum(tran_times) from
+        <include refid="table_name"/>
+        <where>
+            <include refid="condition_sql"/>
+        </where>
+    </select>
+
+    <select id="list" parameterType="java.util.Map" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List"/>
+        from
+        <include refid="table_name"/>
+        <where>
+            <include refid="condition_sql"/>
+        </where>
+    </select>
+</mapper>

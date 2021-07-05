@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.bird.common.realtime.mapper.RealTimeMessMapper">
+
+    <resultMap id="BaseResultMap" type="com.bird.common.realtime.domain.RealTimeMess">
+        <id column="id" jdbcType="INTEGER" property="id"/>
+        <result column="app_type" jdbcType="VARCHAR" property="appType"/>
+        <result column="noti_id" jdbcType="BIGINT" property="notiId"/>
+        <result column="message_id" jdbcType="VARCHAR" property="messageId"/>
+        <result column="message_type" jdbcType="VARCHAR" property="messageType"/>
+        <result column="rt_id" jdbcType="BIGINT" property="rtId"/>
+        <result column="rt_type" jdbcType="VARCHAR" property="rtType"/>
+        <result column="info_flow_type" jdbcType="VARCHAR" property="infoType"/>
+        <result column="rece_user_id" jdbcType="BIGINT" property="receUserId"/>
+        <result column="send_user_id" jdbcType="BIGINT" property="sendUserId"/>
+        <result column="send_user_name" jdbcType="VARCHAR" property="sendUserName"/>
+        <result column="send_head_img" jdbcType="VARCHAR" property="sendHeadImg"/>
+        <result column="send_org_name" jdbcType="VARCHAR" property="sendOrgName"/>
+        <result column="read_status" jdbcType="VARCHAR" property="readStatus"/>
+        <result column="noti_time" jdbcType="TIMESTAMP" property="notiTime"/>
+        <result column="content" jdbcType="VARCHAR" property="content"/>
+        <result column="real_time" jdbcType="VARCHAR" property="realTime"/>
+        <result column="creater" jdbcType="VARCHAR" property="creater"/>
+        <result column="create_time" jdbcType="TIMESTAMP" property="createTime"/>
+        <result column="editor" jdbcType="VARCHAR" property="editor"/>
+        <result column="edit_time" jdbcType="TIMESTAMP" property="editTime"/>
+    </resultMap>
+
+
+    <sql id="table_name">  rt_noti_mess</sql>
+
+    <sql id="condition_sql">
+        <if test="appType != null and appType!= ''">and app_type = #{appType,jdbcType=VARCHAR}</if>
+        <if test="notiId != null">and noti_id = #{notiId,jdbcType=BIGINT}</if>
+        <if test="rtId != null">and rt_id = #{rtId,jdbcType=BIGINT}</if>
+        <if test="receUserId != null">and rece_user_id = #{receUserId,jdbcType=BIGINT}</if>
+        <if test="sendUserId != null">and send_user_id = #{sendUserId,jdbcType=BIGINT}</if>
+        <if test="readStatus != null and readStatus!= ''">and read_status = #{readStatus,jdbcType=VARCHAR}</if>
+        <if test="messageType != null and messageType!= ''">and message_type = #{messageType,jdbcType=VARCHAR}</if>
+        <if test="messageId != null and messageId!= ''">and message_id = #{messageId,jdbcType=VARCHAR}</if>
+    </sql>
+
+
+    <sql id="upd_condition_sql">
+        <if test="appType != null and appType!= ''">and app_type = #{appType,jdbcType=VARCHAR}</if>
+        <if test="notiId != null">and noti_id = #{notiId,jdbcType=BIGINT}</if>
+        <if test="rtId != null">and rt_id = #{rtId,jdbcType=BIGINT}</if>
+        <if test="receUserId != null">and rece_user_id = #{receUserId,jdbcType=BIGINT}</if>
+        <if test="sendUserId != null">and send_user_id = #{sendUserId,jdbcType=BIGINT}</if>
+        <if test="messageType != null and messageType!= ''">and message_type = #{messageType,jdbcType=VARCHAR}</if>
+        <if test="messageId != null and messageId!= ''">and message_id = #{messageId,jdbcType=VARCHAR}</if>
+    </sql>
+
+
+
+    <sql id="Base_Column_List">
+        app_type,noti_id,rt_id,rt_type,info_flow_type,rece_user_id,send_user_id, send_user_name,send_head_img,send_org_name, message_id,message_type,content,real_time,creater,create_time, editor,edit_time
+    </sql>
+
+
+    <select id="get" parameterType="java.util.Map" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List"/>
+        from
+        <include refid="table_name"/>
+        <where>
+            <include refid="condition_sql"/>
+        </where>
+    </select>
+
+
+   <!-- <select id="getById" parameterType="java.lang.Long" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List"/>
+        from
+        <include refid="table_name"/>
+        where id = #{id,jdbcType=BIGINT}
+    </select>
+
+
+    <delete id="deleteById" parameterType="java.lang.Long">
+        delete from
+        <include refid="table_name"/>
+        where id = #{id,jdbcType=BIGINT}
+    </delete>-->
+
+    <delete id="deleteBy" parameterType="java.util.Map" >
+        delete from
+        <include refid="table_name"/>
+        <where>
+            <include refid="condition_sql"/>
+        </where>
+    </delete>
+
+
+    <insert id="insert" useGeneratedKeys="true" keyProperty="id" parameterType="com.bird.common.realtime.domain.RealTimeMess">
+        insert into
+        <include refid="table_name"/>
+        (app_type,noti_id,rt_id,rt_type,info_flow_type,rece_user_id,send_user_id, send_user_name,send_head_img,send_org_name
+        , message_id,message_type,read_status,noti_time,content,real_time,creater,create_time
+        )
+        values (
+        #{appType,jdbcType=VARCHAR}
+        ,#{notiId,jdbcType=BIGINT}
+        ,#{rtId,jdbcType=BIGINT}
+        ,#{rtType,jdbcType=VARCHAR}
+        ,#{infoType,jdbcType=VARCHAR}
+        ,#{receUserId,jdbcType=BIGINT}
+        ,#{sendUserId,jdbcType=BIGINT}
+        ,#{sendUserName,jdbcType=VARCHAR}
+        ,#{sendHeadImg,jdbcType=VARCHAR}
+        ,#{sendOrgName,jdbcType=VARCHAR}
+        ,#{messageId,jdbcType=VARCHAR}
+        ,#{messageType,jdbcType=VARCHAR}
+        ,#{readStatus,jdbcType=VARCHAR}
+        ,#{notiTime,jdbcType=TIMESTAMP}
+        ,#{content,jdbcType=VARCHAR}
+        ,#{realTime,jdbcType=VARCHAR}
+        ,#{creater,jdbcType=VARCHAR},NOW())
+    </insert>
+
+
+  <!--  <update id="update" parameterType="com.bird.pb.ot.domain.noti.OtRealTimeMess">
+        update
+        <include refid="table_name"/>
+        set
+        rt_id = #{rtId,jdbcType=BIGINT},
+        rt_type = #{rtType,jdbcType=VARCHAR},
+        info_flow_type = #{infoFlowType,jdbcType=VARCHAR},
+        rece_user_id = #{receUserId,jdbcType=BIGINT},
+        send_user_id = #{sendUserId,jdbcType=BIGINT},
+        send_user_name = #{sendUserName,jdbcType=VARCHAR},
+        send_head_img = #{sendHeadImg,jdbcType=VARCHAR},
+        send_org_name = #{sendOrgName,jdbcType=VARCHAR},
+        message_id = #{messageId,jdbcType=VARCHAR},
+        message_type = #{messageType,jdbcType=VARCHAR},
+        read_status = #{readStatus,jdbcType=VARCHAR},
+        content = #{content,jdbcType=VARCHAR},
+        real_time = #{realTime,jdbcType=VARCHAR},
+        editor = #{editor,jdbcType=VARCHAR},
+        edit_time = NOW()
+        where id = #{id,jdbcType=INTEGER}
+    </update>-->
+
+
+    <update id="updateReadStatus" parameterType="com.bird.common.realtime.domain.RealTimeMess">
+        update
+        <include refid="table_name"/>
+        set
+        read_status = #{readStatus,jdbcType=VARCHAR},
+        editor = #{editor,jdbcType=VARCHAR},
+        edit_time = NOW()
+        <where>
+            <include refid="upd_condition_sql"/>
+        </where>
+    </update>
+
+
+
+    <select id="count" parameterType="java.util.Map" resultType="java.lang.Integer">
+        select count(*) from
+        <include refid="table_name"/>
+        <where>
+            <include refid="condition_sql"/>
+        </where>
+    </select>
+
+
+
+    <select id="list" parameterType="java.util.Map" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List"/>
+        from
+        <include refid="table_name"/>
+        <where>
+            <include refid="condition_sql"/>
+        </where>
+    </select>
+</mapper>

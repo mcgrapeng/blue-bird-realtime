@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: com.bird.sso:bird-common-sso-api:1.11-SNAPSHOT">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/bird/sso/bird-common-sso-api/1.11-SNAPSHOT/bird-common-sso-api-1.11-SNAPSHOT.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/com/bird/sso/bird-common-sso-api/1.11-SNAPSHOT/bird-common-sso-api-1.11-SNAPSHOT-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/bird/sso/bird-common-sso-api/1.11-SNAPSHOT/bird-common-sso-api-1.11-SNAPSHOT-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
